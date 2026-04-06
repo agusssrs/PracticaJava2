@@ -38,4 +38,51 @@ public class ArrayUnidimensional {
 		
 		return mayor;
 	}
+	
+	public double calcularPromedio() {
+		int acum = 0;
+		double promedio;
+		int i = 0;
+		for (i = 0; i < this.array1.length; i++) {
+			acum = array1[i] + acum;
+		}
+		
+		promedio = acum / i;
+		return promedio;
+	}
+	
+	public void ordenarDeMayorAAmenor() {
+		int i = 0;
+		int z = 0;
+		int temp = 0;
+		
+		for(i=0; i<this.array1.length-1; i++) {
+			for(z=0; z<this.array1.length-1; z++) {
+				if (array1[z] < array1[z+1]) {
+					temp = array1[z];
+					array1[z] = array1[z+1];
+					array1[z+1] = temp;
+				}
+			}
+		}
+	
+	}
+	
+	public void ordenarDeMenorAMayor() {
+		int i = 0;
+		int z = 0;
+		int temp = 0;
+		
+		for(i=0; i<this.array1.length-1; i++) {
+			for(z=0; z<this.array1.length-1; z++) {
+				if (array1[z] > array1[z+1]) {
+					temp = array1[z];
+					array1[z] = array1[z+1];
+					array1[z+1] = temp;
+				}
+			}
+		}
+	
+	}
+	
 }
